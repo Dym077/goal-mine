@@ -1,1 +1,1 @@
-web: gunicorn goalmine.wsgi
+web: gunicorn todo.wsgi
