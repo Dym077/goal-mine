@@ -18,9 +18,9 @@ class Goal(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
 
 class Task(models.Model):
-    goal = models.ForeignKey(Goal,)
+    goal = models.ForeignKey(Goal, on_delete=models.CASCADE, related_name="tasks")
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="tasks"
+        User, on_delete=models.CASCADE, related_name="commenter"
     )
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
