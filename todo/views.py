@@ -1,7 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import Goal
 
 # Create your views here.
 
-def my_todo(request):
-    return HttpResponse("My to do list")
+class GoalsList(generic.ListView):
+    queryset = Goal.objects.all()
+    template_name = "goal_list.html"
