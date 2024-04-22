@@ -28,10 +28,10 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-xl navbar-dark sticky-top create_panel bg-white">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
+            
+            <span class="navbar-text text-muted">
+                A simple web-based task manager
+            </span>
         </div>
     </nav>
     <main>
@@ -42,6 +42,11 @@
     </main>
 
     <footer>
+        <p class="m-0 text-center text-white">
+            {% block copyright %}
+                Made by Andreas Sandberg 2024
+            {% endblock copyright %}
+        </p>
         
     </footer>
 
