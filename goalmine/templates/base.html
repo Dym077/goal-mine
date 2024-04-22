@@ -1,0 +1,45 @@
+{% url 'home' as home_url %}
+
+<!DOCTYPE html>
+<html class="h-100" lang="en">
+
+<head>
+    <title>GoalMine Task manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Insert Google Fonts CSS here -->
+    <link>
+    <link>
+    <link>
+
+    <!-- Insert Font Awesome CSS here -->
+    <link>
+
+    <!-- Insert Bootstrap CSS here -->
+    <link>
+</head>
+
+<body class="d-flex flex-column h-100 main-bg">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-xl navbar-dark sticky-top create_panel bg-white">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+        </div>
+    </nav>
+    <main>
+        {% block content %}
+        <!-- Insert content here -->
+        {% endblock content %}
+    </main>
+
+    <footer>
+        
+    </footer>
+
+</body>
+
+</html>

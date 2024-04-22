@@ -6,4 +6,5 @@ from .models import Goal
 
 class GoalsList(generic.ListView):
     queryset = Goal.objects.filter(status=1)
-    template_name = "goal_list.html"
+    template_name = "todo/index.html"
+    paginate_by = 6
