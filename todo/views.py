@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import Goal
+from .models import Goal, Task
 
 # Create your views here.
 

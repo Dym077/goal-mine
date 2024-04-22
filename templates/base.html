@@ -1,3 +1,5 @@
+{% load static %}
+
 {% url 'home' as home_url %}
 
 <!DOCTYPE html>
@@ -16,6 +18,8 @@
     <link>
 
     <!-- Insert Bootstrap CSS here -->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link>
 </head>
 
@@ -33,6 +37,7 @@
     <main>
         {% block content %}
         <!-- Insert content here -->
+        <p>This is a test pararaph</p>
         {% endblock content %}
     </main>
 
