@@ -7,7 +7,10 @@
 
 ## Why a To-do-list app?
 
-### 
+### The Idea behind it all
+- My initial idea behind buildning a web based task manager, was that I don't always consider myself good at planning things. 
+Making the right priorities and meeting a deadline can sometimes be a challenge for many people, myself included. Therefore I thought it would be great to design something that could be a tool for achieving both bigger goals and smaller tasks. 
+Making the app a web-based tool that can be operated both from a desktop computer, a tablet and a mobile phone, being fully responsive and accessible, could make life easier for a lot of people. 
 
 ### 
 ### 
@@ -112,6 +115,7 @@ I made an early deployment to ensure that the live app was running correctly and
 - Click Reveal Config Vars and enter PORT into the Key box and 8000 into the Value box and click the Add button.
 
 ## Credits
+- [Planner App (Task Manager)](https://github.com/OleksiyLa/Project_4)
 
 ### Resources Used
 
