@@ -7,7 +7,7 @@ from .models import Goal, Task
 class GoalsList(generic.ListView):
     queryset = Goal.objects.filter(status=1)
     template_name = "todo/index.html"
-    paginate_by = 6
+    paginate_by = 18
 
 def goal_detail(request, slug):
     queryset = Goal.objects.filter(status=1)
