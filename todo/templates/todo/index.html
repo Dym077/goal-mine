@@ -2,25 +2,51 @@
 
 {% block content %}
 
-<!-- Here is where index.html content goes-->
+<!-- Here's where index.html content goes -->
 <div class="container-fluid">
-    <div class="row"></div>
-    <!-- Goals column-->
-    <div class="container">
-        <h1 class="my-5 text-center">Goals List</h1>
-        <nav class="navbar navbar-expand-xl navbar-dark sticky-top create_panel">
-    </div>
-    <div class="container-fluid" id="goals-nav-container">
-        <button class="navbar-toggle" type="button" >
+    <div class="row">
 
-        </button>
+        <!-- Goals List Column -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for goal in goal_list %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="image-container">
+                                <div class="image-flash">
+                                    <p class="author">Author: {{ goal.author }}</p>
+                                </div>
+                            </div>
+                            <a href="#" class="goal-link">
+                                <h2 class="card-title">{{ goal.title }}</h2>
+                            </a>
 
+                            <hr />
+                            <p class="card-text text-muted h6">{{ goal.created_on}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+
+            </div>
+        </div>
     </div>
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+</div>
 
 <!-- index.html content ends here -->
-
 {% endblock %}
-
-{% block copyright %}
-    Copyright 2024 Andreas Sandberg
-{% endblock %}    
