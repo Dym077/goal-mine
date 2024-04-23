@@ -18,7 +18,7 @@
                                     <p class="author">Author: {{ goal.author }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="goal-link">
+                            <a href="{% url 'goal_detail' goal.slug %}" class="goal-link">
                                 <h2 class="card-title">{{ goal.title }}</h2>
                                 <p class="card-text">{{ goal.excerpt }}</p>
                             </a>
