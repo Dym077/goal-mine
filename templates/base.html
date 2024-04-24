@@ -2,7 +2,7 @@
 
 {% url 'home' as home_url %}
 
-{% url 'home' as home_url %}
+{% url 'manager' as manager_url %}
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -42,9 +42,17 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'home' %}"></a>
+                            href="{% url 'home' %}">Home</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a
+                          class="nav-link
+                          {% if request.path == manager_url %}active{%endif%}"
+                          aria-current="page"
+                          href="{% url 'manager' %}"
+                          >Tasks</a
+                        >
+                      </li>
                 </ul>
                 <span class="navbar-text text-muted">
                     A task manager to make life easier
