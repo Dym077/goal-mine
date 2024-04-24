@@ -6,10 +6,8 @@
     <div class="col-4 text-center">
       <img src="{% static 'images/nobody.jpg' %}" width="75%" />
     </div>
-    <div class="col-8">
-      <!-- Insert task title here -->
+    <div class="col-8">  
       <h2>{{ manager.title }}</h2>
-      <!-- Insert task content here -->
       {{ manager.content | safe }}
     </div>
   </div>
