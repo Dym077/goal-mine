@@ -28,7 +28,10 @@ Making the app a web-based tool that can be operated both from a desktop compute
 * A new user will be prompted to create a user name and a password. As soon as that is done, the user will be able to log on to the site and start using the features. A returning user will already have created a user name and can log in with those credentials. The user will also be able to change the password if necessary. 
 
 ### Goals
+- A user will be able to set a new goal with a date attached to it, from the goals dashcard.
+There is also an option to set a status for the goal - if it has been completed or not.
 ### Tasks
+- A task is a smaller chore which can be a part of a bigger goal. The task is optional and a user can attach one or more tasks to a goal. There is also the option of setting a status to each task.
 ### Calendar
 ### Authorization
 ## Responiveness
