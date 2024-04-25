@@ -1,11 +1,12 @@
 from django.db import models
+from django.contrib.auth.models import User
+from todo.models import Goal
 
 # Create your models here.
 
 class Task(models.Model):
-    title = models.CharField(max_length=200) 
-    updated_on = models.DateTimeField(auto_now=True)
-    content = models.TextField()
+    goal = models.ForeignKey(Goal, on_delete=models.CASCADE, related_name="tasks") 
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="author")
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
@@ -14,4 +15,5 @@ class Task(models.Model):
         ordering = ["created_on"]
         
     def __str__(self):
-        return f"Task {self.body} | added by {self.author}"
+        return f"Task {self.body} | added by {self.author}"    
+
