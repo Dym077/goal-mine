@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from .models import Goal
+from .forms import Taskform
 
 # Create your views here.
 
@@ -14,8 +15,9 @@ def goal_detail(request, slug):
     goal = get_object_or_404(queryset, slug=slug)
     tasks = goal.tasks.all().order_by("-created_on")
     task_count = len(tasks)
+    task_form = Taskform()
 
-    return render(request, "todo/goal_detail.html", {"goal": goal, "tasks": tasks, "task_count": task_count},) 
+    return render(request, "todo/goal_detail.html", {"goal": goal, "tasks": tasks, "task_count": task_count, "task_form": task_form,},) 
 
     
 
