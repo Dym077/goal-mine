@@ -5,8 +5,8 @@
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
-                <h1 class="post-title">{{ goal.title }}</h1>
-                <p class="post-subtitle">{{ goal.author }} | {{ goal.created_on }}</p>
+                <h1 class="post-title">{{ task.title }}</h1>
+                <p class="post-subtitle">{{ task.author }} | {{ task.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <img src="{% static 'images/default-image.png' %}" class="scale" alt="placeholder">
@@ -21,18 +21,13 @@
             <div class="card-body">
 
                 <p class="card-text">
-                    {{ goal.content | safe }}
+                    {{ task.content | safe }}
                 </p>
             </div>
         </div>
     </div>
     <!-- This shows number of added tasks -->
     <div class="row">
-        <div class="col-12">
-            <strong class="text-secondary">
-                <i class="far fa-comments"></i> {{ task_count }}
-            </strong>
-        </div>
         <div class="col-12">
             <hr>
         </div>
@@ -42,21 +37,6 @@
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Tasks:</h3>
             <div class="card-body">
-                {% for task in tasks %}
-                <div class="p-2 tasks">
-                    <p class="font-weight-bold">
-                        You 
-                        <span class="font-weight-normal">
-                            {{ task.created_on }}
-                        </span> added:
-                    </p>
-                    <div id="task{{ task.id }}">
-                        {{ task.body | linebreaks }}
-                    </div>
-
-                </div>
-                <!-- Our for loop ends here -->
-                {% endfor %}
             </div>
         </div>
     </div>
