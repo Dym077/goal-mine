@@ -43,7 +43,7 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #188181;
+    background-color: #1f2e2e;
 }
 
 .scale {
@@ -98,7 +98,7 @@ body {
 
 .goal-link:hover,
 .page-link {
-    color: #E84610;
+    color: #7c10e8;
 }
 
 .goal-title {
@@ -147,7 +147,7 @@ body {
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: #e81010;
     background: transparent;
     border: none;
 }
