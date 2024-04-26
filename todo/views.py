@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
+from django.contrib import messages
 from .models import Goal
-from .forms import Taskform
+from .forms import TaskForm
 
 # Create your views here.
 
@@ -15,7 +16,19 @@ def goal_detail(request, slug):
     goal = get_object_or_404(queryset, slug=slug)
     tasks = goal.tasks.all().order_by("-created_on")
     task_count = len(tasks)
-    task_form = Taskform()
+
+    if request.method == "POST":
+        task_form = TaskForm(data=request.POST)
+        if task_form.is_valid():
+            task = task_form.save(commit=False)
+            task.author = request.user
+            task.goal = goal
+            task.save()
+            messages.add_message(
+                request, messages.SUCCESS, 'Your task was successfully added'
+                )
+
+    task_form = TaskForm()
 
     return render(request, "todo/goal_detail.html", {"goal": goal, "tasks": tasks, "task_count": task_count, "task_form": task_form,},) 
 
