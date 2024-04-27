@@ -54,7 +54,10 @@
                     <div id="task{{ task.id }}">
                         {{ task.body | linebreaks }}
                     </div>
-
+                    {% if user.is_authenticated and task.author == user %}
+                    <button class="btn btn-delete" task_id="{{ task.id }}">Delete</button>
+                    <button class="btn btn-edit" task_id="{{ task.id }}">Edit</button>
+                    {% endif %}
                 </div>
                 <!-- This is the end.. but only of this for loop -->
                 {% endfor %}
@@ -81,4 +84,32 @@
     </div>
 </div>
 
+<!-- A modal for task deletion confirmation -->
+<div class="modal fade" id="deleteModal" tabindex="-1"
+  aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"
+          id="deleteModalLabel">Delete task?</h5>
+        <button type="button" class="btn-close"
+          data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Do You want to delete this task? The action is irreversible.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary"
+          data-bs-dismiss="modal">Close</button>
+        <a id="deleteConfirm" href="#" class="btn
+          btn-danger">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock content %}
+
+{% block extras %}
+<script src="{% static 'js/tasks.js' %}"></script>
+{% endblock %}
