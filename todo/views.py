@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect
 from manager.models import Goal, Task 
 from .forms import TaskForm
 
+
 # Create your views here.
 
 class GoalsList(generic.ListView):
@@ -17,6 +18,7 @@ def goal_detail(request, slug):
     goal = get_object_or_404(queryset, slug=slug)
     tasks = goal.tasks.all().order_by("-created_on")
     task_count = len(tasks)
+    task_form = TaskForm()
 
     if request.method == "POST":
         
@@ -30,7 +32,7 @@ def goal_detail(request, slug):
                 request, messages.SUCCESS, 'Your task was successfully added'
                 )
 
-    task_form = TaskForm()
+    
 
     return render(request, "todo/goal_detail.html", {"goal": goal, "tasks": tasks, "task_count": task_count, "task_form": task_form,},) 
 
