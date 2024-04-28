@@ -29,9 +29,9 @@ Making the app a web-based tool that can be operated both from a desktop compute
 
 ### Goals
 - A user will be able to set a new goal with a date attached to it, from the goals dashcard.
-There is also an option to set a status for the goal - if it has been completed or not.
+There is also an option to set a status for the goal - if it has been completed or not. Each goal has a texte area where the user can describe in detail what he goal consists of. The user can use a maximum of 200 characters to give the goal an elaborate description. Also, there is an option of assigning different tasks to every goal. These tasks can help the user to break down each goal into smaller pieces which will make it much easier to achieve the assigned goal. 
 ### Tasks
-- A task is a smaller chore which can be a part of a bigger goal. The task is optional and a user can attach one or more tasks to a goal. There is also the option of setting a status to each task.
+- A task is a smaller chore which can be a part of a bigger goal. The task is optional and a user can attach one or more tasks to a goal. There is also the option of setting a status to each task. The user can also - as with the goals edit, update ad delete the tasks. If a task is completed it acn be given the status of done, or if it is no longer current it can be deleted. There is no limit to how many tasks a goal can have, but the user should make sure of not cluttering the goal too much. 
 ### Calendar
 ### Authorization
 ## Responiveness

@@ -9,7 +9,7 @@ from .forms import TaskForm
 
 class GoalsList(generic.ListView):
     queryset = Goal.objects.filter(status=1)
-    template_name = "todo/index.html"
+    template_name = "todo/goal.html"
     paginate_by = 6
 
 def goal_detail(request, slug):
