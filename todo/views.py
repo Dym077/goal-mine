@@ -19,7 +19,7 @@ def goal_detail(request, slug):
     task_count = len(tasks)
 
     if request.method == "POST":
-        print("Received a TASK request")
+        
         task_form = TaskForm(data=request.POST)
         if task_form.is_valid():
             task = task_form.save(commit=False)
@@ -31,7 +31,6 @@ def goal_detail(request, slug):
                 )
 
     task_form = TaskForm()
-    print("About to render template")
 
     return render(request, "todo/goal_detail.html", {"goal": goal, "tasks": tasks, "task_count": task_count, "task_form": task_form,},) 
 
