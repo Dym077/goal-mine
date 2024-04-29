@@ -15,6 +15,9 @@ Making the app a web-based tool that can be operated both from a desktop compute
 ### 
 ### 
 ## Site Owner Goals
+- As a site owner I want to provide an easy-to-use but yet powerful tool for the user to manage their goals and tasks in an efficient way.
+- As a site owner I want to provide the user with the opportunity to create a unique user profile which is only accessible to the user.
+- As a site owner I want to make sure that the user easily can edit, delete and add new goals and tasks using the app.
 ## User Stories
 
 ### First time user
@@ -44,6 +47,7 @@ I started out with a kanban board - assigned to this repository on Github, to id
 - This final version of this project is built using the Django Framework. All models and relations betweeen them as well as dialog with databases are utilizing the powerful features built into the Django framework.  
 - When struturing the views, I was not really sure which page should end up being the landing page. Therefore I changed the original index.html to goal.html. However, this really should be the index.html, as this is the page the user will be taken to after logging in or signing up. 
 ### Target audience
+- Anyone who needs a tool to structure and prioritize their goals can make use of this app.
 ### App Objectives
 
 ## Wireframes
