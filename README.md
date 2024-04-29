@@ -37,7 +37,9 @@ There is also an option to set a status for the goal - if it has been completed 
 - A task is a smaller chore which can be a part of a bigger goal. The task is optional and a user can attach one or more tasks to a goal. There is also the option of setting a status to each task. The user can also - as with the goals edit, update ad delete the tasks. If a task is completed it acn be given the status of done, or if it is no longer current it can be deleted. There is no limit to how many tasks a goal can have, but the user should make sure of not cluttering the goal too much. 
 ### Calendar
 ### Authorization
+- For this project I was using allauth to make it possible for the user to sign up and log in to the site safely. 
 ## Responiveness
+- The app is responsive on all platforms, from desktop to tablets and mobile phones. 
 
 ## Planning and development
 - This was the first project in which I made use of the Agile methodology. A fair amount of time went into planning the project before I could get into building it. 
@@ -51,15 +53,17 @@ I started out with a kanban board - assigned to this repository on Github, to id
 ### App Objectives
 
 ## Wireframes
+- [Wireframe]()
 
 ## Flow charts and ERD’s
-
+- ![Flow Chart](documentation/To-do-list.png)
+- ![ERD](documentation/ERD%20my-to-do-list.png)
 ## Kanban board
 ### EPICS
 ### User Stories
 
-![Flow Chart]
-![ERD]
+
+
 
 ### Models
 
