@@ -12,6 +12,12 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
             </div>
+            <div class="d-none d-md-block col-md-6 masthead-image">
+                {% if "placeholder" in goal.featured_image.url %}
+                <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
+                {% else %}
+                <img src="{{ goal.featured_image.url }}" class="scale" alt="{{ goal.title }}">
+                {% endif %}
         </div>
     </div>
 </div>

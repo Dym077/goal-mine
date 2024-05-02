@@ -25,19 +25,19 @@ def goal_main(request, slug):
     goal = get_object_or_404(queryset, slug=slug)
     goal = goal.goals.all().order_by("-created_on")
     goal_count = len(goals)
-    comment_form = GoalForm()
-    
-    if request.method == "POST":
-        
-        comment_form = GoalForm(data=request.POST)
-        if comment_form.is_valid():
+    if request.method == "POST":   
+        goal_form = GoalForm(data=request.POST)
+        if goal_form.is_valid():
             goal = goal_form.save(commit=False)
             goal.author = request.user
             goal.goal = goal
             goal.save()
+
             messages.add_message(
                 request, messages.SUCCESS, 'Your goal was successfully added'
                 )
+
+        goal_form = GoalForm()          
     
 
 def goal_detail(request, slug):
@@ -86,7 +86,7 @@ def task_edit(request, slug, task_id):
         else:
             messages.add_messsage(request, message.ERROR, 'Error updating task')
 
-    comment_form = GoalForm()        
+    goal_form = GoalForm()        
 
     return HttpResponseRedirect(reverse('goal_detail', args=[slug]))      
 
@@ -96,7 +96,7 @@ def task_edit(request, slug, task_id):
             "goal": goal,
             "goals": goals,
             "goal_count": goal_count,
-            "comment_form": comment_form
+            "goal_form": goal_form
 
         },
     )  
