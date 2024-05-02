@@ -11,7 +11,7 @@
         <!-- Goals List Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
-                {% for goal in goal_list %}
+                {% for goal in goals %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
@@ -53,7 +53,7 @@
               <p>Added by: {{ user.username }}</p>
               <form id="goalForm" method="post"
                 style="margin-top: 1.3em;">
-                {{ goal_form | crispy }}
+                {{ comment_form | crispy }}
                 {% csrf_token %}
                 <button id="submitButton" type="submit"
                   class="btn btn-signup btn-lg">Submit</button>

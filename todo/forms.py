@@ -11,5 +11,5 @@ class TaskForm(forms.ModelForm):
 
 class GoalForm(forms.ModelForm):
     class Meta:
-        model = Task
+        model = Goal
         fields = ('body',)

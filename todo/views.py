@@ -36,7 +36,7 @@ def goal_detail(request, slug):
     
 
     return render(request, "todo/goal_detail.html", {"goal": goal, "tasks": tasks, "task_count": task_count, "task_form": task_form,},)
-    return render(request, "todo/index.html", {"goal": goal, "goals": goals, "goal_count": goal_count, "goal_form": goal_form,},)  
+      
 
     
 def task_edit(request, slug, task_id):
@@ -59,7 +59,20 @@ def task_edit(request, slug, task_id):
         else:
             messages.add_messsage(request, message.ERROR, 'Error updating task')
 
-    return HttpResponseRedirect(reverse('goal_detail', args=[slug]))        
+    comment_form = GoalForm()        
+
+    return HttpResponseRedirect(reverse('goal_detail', args=[slug]))      
+
+    return render(
+        request, "todo/index.html",
+        {
+            "goal": goal,
+            "goals": goals,
+            "goal_count": goal_count,
+            "comment_form": comment_form
+
+        },
+    )  
 
 
 def task_delete(request, slug, task_id):

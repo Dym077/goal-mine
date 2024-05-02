@@ -19,5 +19,5 @@ class Task(models.Model):
 
     def profile_page(request):
         user = get_object_or_404(User, user=request.user)
-        comments = user.author.all()    
+        tasks = user.author.all()    
 
