@@ -3,7 +3,7 @@ from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from manager.models import Goal, Task 
-from .forms import TaskForm
+from .forms import TaskForm, GoalForm
 
 
 # Create your views here.
@@ -19,6 +19,7 @@ def goal_detail(request, slug):
     tasks = goal.tasks.all().order_by("-created_on")
     task_count = len(tasks)
     task_form = TaskForm()
+    goal_form = GoalForm()
 
     if request.method == "POST":
         
@@ -34,7 +35,8 @@ def goal_detail(request, slug):
 
     
 
-    return render(request, "todo/goal_detail.html", {"goal": goal, "tasks": tasks, "task_count": task_count, "task_form": task_form,},) 
+    return render(request, "todo/goal_detail.html", {"goal": goal, "tasks": tasks, "task_count": task_count, "task_form": task_form,},)
+    return render(request, "todo/index.html", {"goal": goal, "goals": goals, "goal_count": goal_count, "goal_form": goal_form,},)  
 
     
 def task_edit(request, slug, task_id):

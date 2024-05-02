@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
@@ -43,6 +44,25 @@
 
             </div>
         </div>
+
+        <!-- The Add Goal form goes here -->
+        <div class="col-md-4 card mb-4 mt-3">
+            <div class="card-body">
+              {% if user.is_authenticated %}
+              <h3>Create a new goal:</h3>
+              <p>Added by: {{ user.username }}</p>
+              <form id="goalForm" method="post"
+                style="margin-top: 1.3em;">
+                {{ goal_form | crispy }}
+                {% csrf_token %}
+                <button id="submitButton" type="submit"
+                  class="btn btn-signup btn-lg">Submit</button>
+              </form>
+              {% else %}
+              <p>Log in to create a goal</p>
+              {% endif %}
+            </div>
+          </div>
     </div>
     {% if is_paginated %}
     <nav aria-label="Page navigation">
