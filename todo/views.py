@@ -13,6 +13,33 @@ class GoalsList(generic.ListView):
     template_name = "todo/index.html"
     paginate_by = 6
 
+    def get_context_data(self, **kwargs):
+        context = super(GoalsList, self).get_context_data(**kwargs)
+        context['form'] = GoalForm()
+        return context
+
+
+
+def goal_main(request, slug):
+    queryset = Goal.objects.filter(status=1)
+    goal = get_object_or_404(queryset, slug=slug)
+    goal = goal.goals.all().order_by("-created_on")
+    goal_count = len(goals)
+    comment_form = GoalForm()
+    
+    if request.method == "POST":
+        
+        comment_form = GoalForm(data=request.POST)
+        if comment_form.is_valid():
+            goal = goal_form.save(commit=False)
+            goal.author = request.user
+            goal.goal = goal
+            goal.save()
+            messages.add_message(
+                request, messages.SUCCESS, 'Your goal was successfully added'
+                )
+    
+
 def goal_detail(request, slug):
     queryset = Goal.objects.filter(status=1)
     goal = get_object_or_404(queryset, slug=slug)
