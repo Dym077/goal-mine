@@ -57,7 +57,7 @@
              
               <h3>Create a new goal:</h3>
               <p>Added by: {{ user.username }}</p>
-              <form id="goalForm" method="post"
+              <form id="goalForm" method="post" action="{% url 'add_goal' %}"
                 style="margin-top: 1.3em;">
                 {{ form | crispy }}
                 {% csrf_token %}

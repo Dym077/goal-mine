@@ -111,6 +111,9 @@ will make use of the "delete"-operation and the item will be erased accordingly.
 ## Data model
 
 ### Programs Used
+* Gitpod for coding.
+* Lucidchart for making ERD's.
+* 
 
 ## Features left to implement.
 
@@ -136,13 +139,17 @@ I made an early deployment to ensure that the live app was running correctly and
 
 ## Credits
 - [Planner App (Task Manager)](https://github.com/OleksiyLa/Project_4)
-
+- Image was downloaded from [Freepik](https://www.freepik.com/)  Designed by pch.vector / Freepik
 ### Resources Used
 
 #### Online Resources
 - [Django To Do List App With User Registration & Login](https://www.youtube.com/watch?v=llbtoQTt4qw&t=1484s)
+- [TinyPNG]https://tinypng.com/ for compressing images.
+- [Cloudconvert](https://cloudconvert.com/) for comverting images to webp-format.
 
 #### Desktop resources
+* Affinity Photo for image editing.
+* Paint for image editing.
 
 ## Acknowledgments
 

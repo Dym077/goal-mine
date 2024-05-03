@@ -20,24 +20,23 @@ class GoalsList(generic.ListView):
 
 
 
-def goal_main(request, slug):
-    queryset = Goal.objects.filter(status=1)
-    goal = get_object_or_404(queryset, slug=slug)
-    goal = goal.goals.all().order_by("-created_on")
-    goal_count = len(goals)
+def add_goal(request):
     if request.method == "POST":   
-        goal_form = GoalForm(data=request.POST)
+        goal_form = GoalForm(request.POST)
         if goal_form.is_valid():
             goal = goal_form.save(commit=False)
             goal.author = request.user
             goal.goal = goal
             goal.save()
+    else:
+        goal_form = GoalForm()   
+    return render(request, 'goal_detail.html', {'goal_form': goal_form})
 
-            messages.add_message(
+    messages.add_message(
                 request, messages.SUCCESS, 'Your goal was successfully added'
                 )
 
-        goal_form = GoalForm()          
+    goal_form = GoalForm()          
     
 
 def goal_detail(request, slug):

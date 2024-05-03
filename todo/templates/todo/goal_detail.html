@@ -75,7 +75,7 @@
           {% if user.is_authenticated %}
           <h3>Add a new task:</h3>
           <p>Posting as: {{ user.username }}</p>
-          <form id="taskForm" method="post"
+          <form id="taskForm" method="POST" action="{% url 'add_goal' %}"
             style="margin-top: 1.3em;">
             {{ task_form | crispy }}
             {% csrf_token %}
