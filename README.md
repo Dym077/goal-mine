@@ -18,13 +18,6 @@ Making the app a web-based tool that can be operated both from a desktop compute
 - As a site owner I want to provide an easy-to-use but yet powerful tool for the user to manage their goals and tasks in an efficient way.
 - As a site owner I want to provide the user with the opportunity to create a unique user profile which is only accessible to the user.
 - As a site owner I want to make sure that the user easily can edit, delete and add new goals and tasks using the app.
-## User Stories
-
-### First time user
-
-### Returning user
-
-### Frequent user
 
 ## Features
 ### Authentication
@@ -118,7 +111,7 @@ will make use of the "delete"-operation and the item will be erased accordingly.
 ## Features left to implement.
 
 ## Agile Methodology
-* 
+* Making use of the Agile Methodology for the first time was a steep learning curve for me. However, it proved to be a quite powerful awy of realizing a project. Even though I struggled to put the final project together, it would probably have been even more difficult without proper planning and methodical structuring of the application.  
 * Kanban board: https://github.com/users/Dym077/projects/2 
 
 ## Known Bugs
