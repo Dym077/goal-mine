@@ -12,4 +12,4 @@ class TaskForm(forms.ModelForm):
 class GoalForm(forms.ModelForm):
     class Meta:
         model = Goal
-        fields = ('body',)
+        fields = ('title', 'body',)
