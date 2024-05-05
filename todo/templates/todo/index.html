@@ -6,17 +6,18 @@
 <!-- Here's where index.html content goes -->
 <div class="container-fluid">
     <div class="row">
-        <p><strong>The Goal-Mine is a basic but easy to use task manager that can help You organize both daily chores and long-term goals.
-            <br>
-            Add, edit and complete Your tasks and achieve Your goals.</strong>
+        <p><strong>The Goal-Mine is a basic but easy to use task manager that can help You organize both daily chores
+                and long-term goals.
+                <br>
+                Add, edit and complete Your tasks and achieve Your goals.</strong>
         </p>
-        <img src="{% static 'images/4361.webp' %}" width="200" 
-        height="250" alt="placeholder"/>
-        
+        <img src="{% static 'images/4361.webp' %}" width="200" height="250" alt="placeholder" />
+
         <!-- Goals List Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for goal in goals %}
+                {% if goal.author == request.user %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
@@ -34,10 +35,11 @@
                             <hr />
                             <ul>
                                 {%for task in goal.tasks.all%}
-                                    <li>{{task.body}}</li>
+                                <li>{{task.body}}</li>
                                 {%endfor%}
                             </ul>
                             <p class="card-text text-muted h6">{{ goal.created_on }}
+                            {% endif %}    
                             </p>
                         </div>
                     </div>
@@ -55,17 +57,16 @@
         {% if user.is_authenticated %}
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
-             
-              <h3>Create a new goal:</h3>
-              <p>Added by: {{ user.username }}</p>
-              <form id="goalForm" method="post" style="margin-top: 1.3em;">
-                {{ form | crispy }}
-                {% csrf_token %}
-                <button id="submitButton" type="submit"
-                  class="btn btn-signup btn-lg">Submit</button>
-              </form>
+
+                <h3>Create a new goal:</h3>
+                <p>Added by: {{ user.username }}</p>
+                <form id="goalForm" method="post" style="margin-top: 1.3em;">
+                    {{ form | crispy }}
+                    {% csrf_token %}
+                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
             </div>
-          </div>
+        </div>
         {% endif %}
     </div>
     {% if is_paginated %}

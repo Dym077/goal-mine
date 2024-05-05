@@ -38,8 +38,13 @@ class GoalsList(generic.ListView):
         list_of_goals = Goal.objects.all()
         return render(request, "todo/index.html", {"goals": list_of_goals, "form": GoalForm})
 
-    
+    def GoalsList(request):
+        if request.user.is_authenticated:
+            goals = Goal.objects.filter(user=request.user)
+        else:
+            goals = Goal.objects.none()  # Return an empty queryset if the user is not authenticated
 
+        return render(request, 'index.html', {'goals': goals})    
 
 
     def post(self, request, *args, **kwargs):

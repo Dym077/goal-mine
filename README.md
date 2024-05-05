@@ -1,8 +1,8 @@
 # My To-do-list
 ![]()
 
-
-- The live link is found via this link - [](https://dymo-my-todo-list-7a30e9c04781.herokuapp.com/)
+- The Github project can be found [here](https://github.com/Dym077/goal-mine) 
+- The live link is found via [this link](https://goal-mine-8c569f15a81b.herokuapp.com/)
 
 
 ## Why a To-do-list app?
@@ -12,8 +12,6 @@
 Making the right priorities and meeting a deadline can sometimes be a challenge for many people, myself included. Therefore I thought it would be great to design something that could be a tool for achieving both bigger goals and smaller tasks. 
 Making the app a web-based tool that can be operated both from a desktop computer, a tablet and a mobile phone, being fully responsive and accessible, could make life easier for a lot of people. 
 
-### 
-### 
 ## Site Owner Goals
 - As a site owner I want to provide an easy-to-use but yet powerful tool for the user to manage their goals and tasks in an efficient way.
 - As a site owner I want to provide the user with the opportunity to create a unique user profile which is only accessible to the user.
@@ -61,8 +59,41 @@ Because of its wed-based nature, the app is available everywhere where the user 
 - ![Flow Chart](documentation/To-do-list.png)
 - ![ERD](documentation/ERD%20my-to-do-list.png)
 ## Kanban board
+![Kanban](documentation/kanban.png)
 ### EPICS
+* Create App
+* Django Setup
+* Pagination
+* Account Management
+* Goals
+* Tasks
+* Calendar
+* Deployment
+* Documentation 
+* Testing 
+
 ### User Stories
+
+* Automated Testing
+* Goals Menu
+* Update Personal Info
+* Readme
+* Show Goals/ tasks
+* Goals dash card
+* Delete Goal
+* Delete Account
+* Log in with social media platforms
+* Links to social media
+* Scheduled taskt - status
+* Manual testing
+* Responsiveness and accessibility
+* Log in/ Log out
+* ERD
+* Tasks menu
+* Sign up
+* Task dash card
+* Reset password
+
 
 
 
