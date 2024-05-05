@@ -33,17 +33,12 @@ class EditGoal(generic.ListView):
 class GoalsList(generic.ListView):
     
     def get(self, request, *args, **kwargs):
-        # queryset = Goal.objects.filter(status=1)
-        # template_name = "todo/index.html"
-        # paginate_by = 6
+      
         goal_form = GoalForm()
         list_of_goals = Goal.objects.all()
         return render(request, "todo/index.html", {"goals": list_of_goals, "form": GoalForm})
 
-    # def get_context_data(self, **kwargs):
-    #    context = super(GoalsList, self).get_context_data(**kwargs)
-    #    context['form'] = GoalForm()
-    #    return context
+    
 
 
 
@@ -69,7 +64,7 @@ class GoalsList(generic.ListView):
         
 
     def goal_detail(request, pk):
-        # queryset = Goal.objects.filter(status=1)
+        
         goal = get_object_or_404(Goal, pk=pk)
         tasks = goal.tasks.all().order_by("-created_on")
         task_count = len(tasks)

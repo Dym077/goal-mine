@@ -79,27 +79,6 @@
         <!-- Creating New Tasks -->
     <div class="col-md-4 card mb-4 mt-3">
 
-        <!-- Redundant?
-        <div class="card-body">
-          {% if user.is_authenticated %}
-          <h3>Add a new task:</h3>
-          <p>Posting as: {{ user.username }}</p>
-          
-            style="margin-top: 1.3em;">
-            {{ task_form | crispy }}
-            {% csrf_token %}
-            <button id="submitButton" type="submit"
-              class="btn btn-signup btn-lg">OK</button>
-          </form>
-          {% else %}
-          <p>Log in to add a task</p>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-</div>
--->
-
 <!-- A modal for goal deletion confirmation -->
 <div class="modal fade" id="deleteModal" tabindex="-1"
   aria-labelledby="deleteModalLabel" aria-hidden="true">
