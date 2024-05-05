@@ -5,6 +5,7 @@ from todo.models import Goal
 # Create your models here.
 
 class Task(models.Model):
+    title = models.CharField(max_length=200)
     goal = models.ForeignKey(Goal, on_delete=models.CASCADE, related_name="tasks") 
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="author")
     body = models.TextField()

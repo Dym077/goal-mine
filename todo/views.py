@@ -33,17 +33,17 @@ class EditGoal(generic.ListView):
 class GoalsList(generic.ListView):
     
     def get(self, request, *args, **kwargs):
-        # queryset = Goal.objects.filter(status=1)
-        # template_name = "todo/index.html"
-        # paginate_by = 6
+        queryset = Goal.objects.filter(status=1)
+        template_name = "todo/index.html"
+        paginate_by = 6
         goal_form = GoalForm()
         list_of_goals = Goal.objects.all()
         return render(request, "todo/index.html", {"goals": list_of_goals, "form": GoalForm})
 
-    # def get_context_data(self, **kwargs):
-    #    context = super(GoalsList, self).get_context_data(**kwargs)
-    #    context['form'] = GoalForm()
-    #    return context
+    def get_context_data(self, **kwargs):
+        context = super(GoalsList, self).get_context_data(**kwargs)
+        context['form'] = GoalForm()
+        return context
 
 
 
@@ -69,7 +69,7 @@ class GoalsList(generic.ListView):
         
 
     def goal_detail(request, pk):
-        # queryset = Goal.objects.filter(status=1)
+        queryset = Goal.objects.filter(status=1)
         goal = get_object_or_404(Goal, pk=pk)
         tasks = goal.tasks.all().order_by("-created_on")
         task_count = len(tasks)
@@ -88,7 +88,17 @@ class GoalsList(generic.ListView):
                     request, messages.SUCCESS, 'Your task was successfully added'
                     )
         return render(request, "todo/goal_detail.html", {"goal": goal, "tasks": tasks, "task_count": task_count, "task_form": task_form,},)
-        
+    
+def add_task(request):
+    if request.method == 'POST':
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('goal_detail')  
+    else:
+        form = TaskForm()
+
+    return render(request, 'task.html', {'form': form})    
 
         
     def task_edit(request, slug, task_id):

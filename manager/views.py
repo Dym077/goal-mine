@@ -10,3 +10,5 @@ def task_manager(request):
     manager = Task.objects.all().order_by('-updated_on').first()
 
     return render(request, "manager/task.html", {"manager": manager},)
+
+    
