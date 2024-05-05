@@ -3,7 +3,6 @@
 {% load static %}
 {% block content %}
 
-
 <!-- Here's where index.html content goes -->
 <div class="container-fluid">
     <div class="row">
@@ -53,6 +52,7 @@
         </div>
 
         <!-- The Add Goal form goes here -->
+        {% if user.is_authenticated %}
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
              
@@ -64,11 +64,9 @@
                 <button id="submitButton" type="submit"
                   class="btn btn-signup btn-lg">Submit</button>
               </form>
-              {% if user.is_authenticated %}show form{% else %}
-              <p>Log in to create a goal</p>
-              {% endif %}
             </div>
           </div>
+        {% endif %}
     </div>
     {% if is_paginated %}
     <nav aria-label="Page navigation">

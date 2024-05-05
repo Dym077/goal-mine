@@ -123,9 +123,10 @@ will make use of the "delete"-operation and the item will be erased accordingly.
 * Kanban board: https://github.com/users/Dym077/projects/2 
 
 ## Known Bugs
-- When trying to submit a goal when not logged in, the user will encounter an error instead of being prompted to log in first. This error is the cause of the login function not restraining access to the goal form, which should only be accessible after the usre has been registered or logged in. 
+ 
 
 ## Fixed Bugs
+- When trying to submit a goal when not logged in, the user would encounter an error instead of being prompted to log in first. This error as the cause of the login function not restraining access to the goal form, which should only be accessible after the usrer has been registered or logged in. To prevent this from happening, I made the goal form inaccessible to an unauthenticated user, which acquires a new user to register or a returning user to simply login. 
 
 ## Deployment
 * This project was deployed using Heroku.
