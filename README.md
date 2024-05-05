@@ -94,10 +94,6 @@ Because of its wed-based nature, the app is available everywhere where the user 
 * Task dash card
 * Reset password
 
-
-
-
-
 ### Models
 
 ## Design
