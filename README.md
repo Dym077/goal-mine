@@ -51,6 +51,8 @@ Here it is possible both to edit and delete a goal.
 - ![Goal page](documentation/goal_page.png)
 - If You want to delete a goal, You simply click on delete and the Delete Modal will pop up, asking You to confirm the deletion:
 - ![Delete Modal](documentation/delete_modal.png)
+- If You want to add a completely new goal You start from an empty form:
+- ![Empty form](documentation/empty_form.png)
 - If You choose to edit an existing goal, You will be redirected to the goal form again.
 - ![Goal Form](documentation/goal_form.png)
 - When the goal is edited You can choose "Submit" and the goal will be added to the Goalslist:
@@ -170,6 +172,9 @@ which makes use of the "update"-operation. Finally, if a user wants to delete a 
 will make use of the "delete"-operation and the item will be erased accordingly. 
 
 ## Testing
+
+### Automated testing
+- This project was the first one where I used automated testing. This was also one of the last things I got familiarized with during the building of the application. Therefore I'm not sure I fully grasped the power of it. However, there's a high probability that I will employ this unctionnnnfor testing future projects, as well as updated  versions of this app. 
 
 ### PEP8 Testing
 - All python code has been tested with the ![Pythonchecker]https://www.pythonchecker.com/
