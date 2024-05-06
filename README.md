@@ -111,14 +111,42 @@ will make use of the "delete"-operation and the item will be erased accordingly.
 ## Testing
 
 ### PEP8 Testing
-
+- All python code has been tested with the ![Pythonchecker]https://www.pythonchecker.com/
+Results vary from 'solid'(c:a 50%) to 'guido'(100%).
 ### Input Testing
 
 ### Other Testing
 •	Lighthouse
+- Lighthouse testing of the page resulted in an average score of 94% for desktop and 92% for mobile devices.
 •	JSHInt 
+- The JavaScript validation returned no errors but these warnings were listed:
+19 warnings
+1	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+2	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+3	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+4	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+6	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+7	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+8	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+11	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+11	'for of' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+12	'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
+13	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+14	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+14	'template literal syntax' is only available in ES6 (use 'esversion: 6').
+17	'template literal syntax' is only available in ES6 (use 'esversion: 6').
+22	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+22	'for of' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+23	'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
+24	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+25	'template literal syntax' is only available in ES6 (use 'esversion: 6').
+One undefined variable
+6	bootstrap
+
 •	W3C CSS Validator
+- The CSS passed through the valitation tool without any errors or warnings.
 •	W3C HTML Validator
+- 
 ### Browser testing
 
 ## Technologies Used
