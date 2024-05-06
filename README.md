@@ -21,6 +21,9 @@ Making the app a web-based tool that can be operated both from a desktop compute
 
 ### Authentication
 * A new user will be prompted to create a user name and a password. As soon as that is done, the user will be able to log on to the site and start using the features. A returning user will already have created a user name and can log in with those credentials. The user will also be able to change the password if necessary. 
+- For this project I was using allauth to make it possible for the user to sign up and log in to the site safely.
+The user can also feel safe that noone else has access to the contet that is added or edited. The only person except the user that can access the content is the administrator, which can be contacted if the user should lose some important content.
+If the user needs to update personal info or wishes to delete the account, the administrator can also be contacted.
 
 ### Goals
 - A user will be able to set a new goal with a date attached to it, from the goals dashcard.
@@ -32,9 +35,18 @@ There is also an option to set a status for the goal - if it has been completed 
 - A task is a smaller chore which can be a part of a bigger goal. The task is optional and a user can attach one or more tasks to a goal. There is also the option of setting a status to each task. The user can also - as with the goals edit, update ad delete the tasks. If a task is completed it acn be given the status of done, or if it is no longer current it can be deleted. There is no limit to how many tasks a goal can have, but the user should make sure of not cluttering the goal too much. Due to time constraints, the task page wasn't properly implemented. Instead the user will be redirected to the goals form, where tasks can be added and edited manually to the users content. The decision to not include the task page was a hard one - a sort of "kill your darlings"- decision, as it was a good and quite useful feature. In a future update, the task will most likely be implemented though.
 
 ### Calendar
-- Another feature that had to be gone because of time constraints. The calendar was planned to be on a separate page where the user could see the goals and tasks to be able to set deadlines and reschedule. This feature is not a must-have, but would absolutely be a nice addition to a future version of this project. 
+- Another feature that had to be put on hold because of time constraints. The calendar was planned to be on a separate page where the user could see the goals and tasks to be able to set deadlines and reschedule. This feature is not a must-have, but would absolutely be a nice addition to a future version of this project. 
 
-- For this project I was using allauth to make it possible for the user to sign up and log in to the site safely. 
+## Navigation
+- ![Landing page](documentation/landing_page1.png)
+- ![Signup page](documentation/signup.png)
+- ![Signin page](documentation//signin.png)
+- ![Signout page](documentation/signout.png)
+- ![Logged out](documentation/loggedout_goal.png)
+- ![Goal page](documentation/goal_page.png)
+- ![Goals List](documentation/goalslist.png)
+- ![Goal Form](documentation/goal_form.png)
+
 ## Responiveness
 - The app is responsive on all platforms, from desktop to tablets and mobile phones. 
 
@@ -51,6 +63,9 @@ I started out with a kanban board - assigned to this repository on Github, to id
 Because of its wed-based nature, the app is available everywhere where the user has an internet connection. 
 
 ### App Objectives
+- To let the user create a user profile.
+- To let the user easily create, read, edit and delete the assigned goals.
+- To make use of safe information storage in the Django database, and assure that the content created belongs to the user only.
 
 ## Wireframes
 - [Wireframe]()
@@ -95,6 +110,11 @@ Because of its wed-based nature, the app is available everywhere where the user 
 * Reset password
 
 ### Models
+- This app makes use of two models, basically; the Goal and the Task. 
+In this version, only the Goal version was made functional because of developing difficulties, leading to time shortage.
+However, the base code for the Task model is written and will be implemented into a future version of the project. 
+-[Goal model](documentation/class_goal.png)
+-[Task model](documentation/class_task.png)
 
 ## Design
 ### Colors
@@ -116,8 +136,10 @@ Results vary from 'solid'(c:a 50%) to 'guido'(100%).
 ### Input Testing
 
 ### Other Testing
-•	Lighthouse
+• Lighthouse
 - Lighthouse testing of the page resulted in an average score of 94% for desktop and 92% for mobile devices.
+![Lighthouse Desktop](documentation/lighthouse_desktop.png)
+![Lighthouse Mobile](documentation/lighthouse_mobile.png)
 •	JSHInt 
 - The JavaScript validation returned no errors but these warnings were listed:
 19 warnings
@@ -150,6 +172,9 @@ One undefined variable
 - [HTML Validation](documentation/html_errors.png)
 - [HTML Validation2](documentation/html_errors2.png) 
 ### Browser testing
+- The app has been tested for its responsiveness on desktop, laptop, tablet and mobile phone.
+It is fully responsive on all devices. 
+- Amiresponsive and Responinator were also useful tools when testing the apps responsiveness.
 
 
 ## Technologies Used
@@ -164,8 +189,11 @@ One undefined variable
 -   PostgreSQL
 ### Libraries used
 - Django
-- Bootstrap
-
+- Bootstrap 5
+- Summernote 
+- Whitenoise
+- Middleware
+- Allauth
 
 ### Platforms used
 
