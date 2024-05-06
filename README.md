@@ -42,7 +42,6 @@ There is also an option to set a status for the goal - if it has been completed 
 - ![Signup page](documentation/signup.png)
 - ![Signin page](documentation//signin.png)
 - ![Signout page](documentation/signout.png)
-- ![Logged out](documentation/loggedout_goal.png)
 - ![Goal page](documentation/goal_page.png)
 - ![Goals List](documentation/goalslist.png)
 - ![Goal Form](documentation/goal_form.png)
@@ -88,6 +87,9 @@ Because of its wed-based nature, the app is available everywhere where the user 
 * Testing 
 
 ### User Stories
+- The user stories in the kanban board are structured from a template, making use of the Agile methodology. 
+They have one or more Acceptance Criterias attached to them, and are also labelled in importance from "must have" to "won't have". A user story that has a "must have" label attached to it, will probably be one of the most important features, let's say the Goal feature. A user story such as "Login with social media platforms", would probably have a label of "could have".
+Below are all the user stories I created for this project - far from all of them were implemented, but the most important "must haves" are implemented in their basic form. There are a few "should haves", such as the Delete Account function, which has not been implemented yet. 
 
 * Automated Testing
 * Goals Menu
@@ -117,6 +119,7 @@ However, the base code for the Task model is written and will be implemented int
 -[Task model](documentation/class_task.png)
 
 ## Design
+- The goals that the user adds into the application, will be displayed in a listview, which is not optimal but works well for this project. 
 ### Colors
 ### Fonts
 
@@ -168,7 +171,7 @@ One undefined variable
 •	W3C CSS Validator
 - The CSS passed through the validation tool without any errors or warnings.
 •	W3C HTML Validator
-- The validator returns some info and errors that don't create any conflicts in the project. However they are listed below just for the sake of the documentation. In a future version of this project, there might be useful information to draw from when implementing new features. 
+- The validator returns some useful info and errors that don't create any conflicts in the project. However they are listed below just for the sake of the documentation. In a future version of this project, there might be useful information to draw from when implementing new features. 
 - [HTML Validation](documentation/html_errors.png)
 - [HTML Validation2](documentation/html_errors2.png) 
 ### Browser testing
@@ -233,7 +236,7 @@ I made an early deployment to ensure that the live app was running correctly and
 
 #### Online Resources
 - [Django To Do List App With User Registration & Login](https://www.youtube.com/watch?v=llbtoQTt4qw&t=1484s)
-- [TinyPNG]https://tinypng.com/ for compressing images.
+- [TinyPNG](https://tinypng.com/) for compressing images.
 - [Cloudconvert](https://cloudconvert.com/) for comverting images to webp-format.
 
 #### Desktop resources
