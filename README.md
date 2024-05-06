@@ -38,13 +38,24 @@ There is also an option to set a status for the goal - if it has been completed 
 - Another feature that had to be put on hold because of time constraints. The calendar was planned to be on a separate page where the user could see the goals and tasks to be able to set deadlines and reschedule. This feature is not a must-have, but would absolutely be a nice addition to a future version of this project. 
 
 ## Navigation
+- When a user arrives to the site, this is the first thing that will be visible:
 - ![Landing page](documentation/landing_page1.png)
+- If a user wants to add goals, the first thing to do, is to create a user account:
 - ![Signup page](documentation/signup.png)
+- If You are a returning or frequent user visiting the page, it is more likely You will sign in to Your existing account instead:
 - ![Signin page](documentation//signin.png)
+- When a user is done visiting the page, it is a good idea to sign out from the page:
 - ![Signout page](documentation/signout.png)
+- If You are not done planning, You can click on a selected goal and go to the goal page. 
+Here it is possible both to edit and delete a goal. 
 - ![Goal page](documentation/goal_page.png)
-- ![Goals List](documentation/goalslist.png)
+- If You want to delete a goal, You simply click on delete and the Delete Modal will pop up, asking You to confirm the deletion:
+- ![Delete Modal](documentation/delete_modal.png)
+- If You choose to edit an existing goal, You will be redirected to the goal form again.
 - ![Goal Form](documentation/goal_form.png)
+- When the goal is edited You can choose "Submit" and the goal will be added to the Goalslist:
+- ![Goals List](documentation/goalslist.png)
+
 
 ## Responiveness
 - The app is responsive on all platforms, from desktop to tablets and mobile phones. 
@@ -136,11 +147,19 @@ However, the base code for the Task model is written and will be implemented int
 ### Colors
 - I tried to use colors that blend well together and don't conflict too much. Both for a better user experience and accessibility. When setting the color scheme, I was aware of the colors in the image on the landing page and chose the colors accordingly.
 - ![Green](documentation/green%20(2).png)
-- This green color has a HEX value of #188123 and was used for the masthead background in the goal area. Both dark and light text is clearly visible on it and the hue has a soothing feel to it. 
+- This green color has a HEX value of #188123 and was used for the masthead background in the goal area as well as for the submit and edit buttons. Both dark and light text is clearly visible on it and the hue has a soothing feel to it.
 - ![Green2](documentation/green2%20(2).png)
 - This color value is similar to the one above, but has a HEX value of #22a11f and it was used on som lettering on the base.html.
-- ![]
+- ![Red](documentation/red.png)
+- The red color is often used to signal a warning or something that needs som extra attention, but it can also be decorative and serve multiple purposes to ease accessibility in a web app. It has been used for some lettering as well as on the delete button in the goal area.
+- ![Grey](documentation/grey1.png)
+A great background color for most purposes in a web app. The developer should pay some attention to the choice of letters to work in conjunction with the background though. 
+
+- ![Greenish_grey](documentation/green_grey%20(5).png)
+- A slightly more greenish tone that blends in quite well with the more clear green and pure grey colors. 
 ### Fonts
+- For this project I did not have to look for a specific font to get it to work - I used the default google font from the walkthrough, as it fitted this type of app perfectly. 
+"https://fonts.googleapis.com/css2?family=Indie+Flower&family=Jersey+25&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Share+Tech+Mono&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap
 
 ### CRUD Implementation
 - This app makes use of the CRUD operations (Create, Read, Update & Delete).
@@ -156,6 +175,9 @@ will make use of the "delete"-operation and the item will be erased accordingly.
 - All python code has been tested with the ![Pythonchecker]https://www.pythonchecker.com/
 Results vary from 'solid'(c:a 50%) to 'guido'(100%).
 ### Input Testing
+- The register and login/logout fields accepts and handles text and integer input properly.
+- The body field of the goal page accepts text and integer input up to 200 characters and the input is properly processed after the submit button is clicked. 
+- The delete modal also handles onclick input to process requests such as edit and delete. 
 
 ### Other Testing
 • Lighthouse
