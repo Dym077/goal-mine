@@ -153,7 +153,7 @@ However, the base code for the Task model is written and will be implemented int
 - ![Green2](documentation/green2%20(2).png)
 - This color value is similar to the one above, but has a HEX value of #22a11f and it was used on som lettering on the base.html.
 - ![Red](documentation/red.png)
-- The red color is often used to signal a warning or something that needs som extra attention, but it can also be decorative and serve multiple purposes to ease accessibility in a web app. It has been used for some lettering as well as on the delete button in the goal area.
+- The red color is often used to signal a warning or something that needs som extra attention, but it can also be decorative and serve multiple purposes to ease accessibility in a web app. It has been used for some lettering as well as on the delete button in the goal area. While it's quite obvious that this hue is more reminiscent of orange than anything else, I choose to call it red for this project.
 - ![Grey](documentation/grey1.png)
 A great background color for most purposes in a web app. The developer should pay some attention to the choice of letters to work in conjunction with the background though. 
 
@@ -256,7 +256,7 @@ It is fully responsive on all devices.
 * Kanban board: https://github.com/users/Dym077/projects/2 
 
 ## Known Bugs
- 
+- No bugs are currently known
 
 ## Fixed Bugs
 - When trying to submit a goal when not logged in, the user would encounter an error instead of being prompted to log in first. This error as the cause of the login function not restraining access to the goal form, which should only be accessible after the usrer has been registered or logged in. To prevent this from happening, I made the goal form inaccessible to an unauthenticated user, which acquires a new user to register or a returning user to simply login. 
@@ -282,6 +282,11 @@ I made an early deployment to ensure that the live app was running correctly and
 - [Django To Do List App With User Registration & Login](https://www.youtube.com/watch?v=llbtoQTt4qw&t=1484s)
 - [TinyPNG](https://tinypng.com/) for compressing images.
 - [Cloudconvert](https://cloudconvert.com/) for comverting images to webp-format.
+- [TTSReader](https://ttsreader.com/player/) for transforming chunks of text in the learning modules to speech.
+- [AmIResponsive](https://ui.dev/amiresponsive) for testing the app on multiple virtual devices.
+- [Responsinator](http://www.responsinator.com/) also for testing the app on multiple virtual devices.
+- [Dee Mc](https://www.youtube.com/@IonaFrisbee) for further learning of the Django framework.
+
 
 #### Desktop resources
 * Affinity Photo for image editing.
@@ -290,6 +295,8 @@ I made an early deployment to ensure that the live app was running correctly and
 ## Acknowledgments
 - Antonio Rodriquez
 - Tomas Kubancik
-- Roman Rakic
+- Eventyret
+- Roman Rakic & the tutors at Code Institute
 - Martin Degerman
 - The Slack community and Community Sweden
+
