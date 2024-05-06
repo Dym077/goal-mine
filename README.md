@@ -1,5 +1,5 @@
-# My To-do-list
-![]()
+# Goal-Mine (An everyday task manager)
+![Goal-Mine](documentation/responsive.png)
 
 - The Github project can be found [here](https://github.com/Dym077/goal-mine) 
 - The live link is found via [this link](https://goal-mine-8c569f15a81b.herokuapp.com/)
@@ -8,7 +8,7 @@
 ## Why a To-do-list app?
 
 ### The Idea behind it all
-- My initial idea behind buildning a web based task manager, was that I don't always consider myself good at planning things. 
+- My initial idea of building a web based task manager, was that I don't always consider myself good at planning things. 
 Making the right priorities and meeting a deadline can sometimes be a challenge for many people, myself included. Therefore I thought it would be great to design something that could be a tool for achieving both bigger goals and smaller tasks. 
 Making the app a web-based tool that can be operated both from a desktop computer, a tablet and a mobile phone, being fully responsive and accessible, could make life easier for a lot of people. 
 
@@ -144,10 +144,13 @@ One undefined variable
 6	bootstrap
 
 •	W3C CSS Validator
-- The CSS passed through the valitation tool without any errors or warnings.
+- The CSS passed through the validation tool without any errors or warnings.
 •	W3C HTML Validator
-- 
+- The validator returns some info and errors that don't create any conflicts in the project. However they are listed below just for the sake of the documentation. In a future version of this project, there might be useful information to draw from when implementing new features. 
+- [HTML Validation](documentation/html_errors.png)
+- [HTML Validation2](documentation/html_errors2.png) 
 ### Browser testing
+
 
 ## Technologies Used
 •	Framework
