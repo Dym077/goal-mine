@@ -52,10 +52,13 @@ There is also an option to set a status for the goal - if it has been completed 
 ## Planning and development
 - This was the first project in which I made use of the Agile methodology. A fair amount of time went into planning the project before I could get into building it. 
 I started out with a kanban board - assigned to this repository on Github, to identify the EPIS's and User Stories needed to realize the project in a satisfactory way. Using the backlog in the kanban board, appeared to be a very powerful process to keep track of what I was doing.
-- Realizing the ideas I had written down and put in ERD's and flowcharts was more challenging than I expected. Actually, just coming up with a comprehensive entity relationship diagram that could be translated into code, was something I had to practice alot before ending up with the ERD represented in this document. 
+- Realizing the ideas I had written down and put in ERD's and flowcharts was more challenging than I expected. Actually, just coming up with a comprehensive entity relationship diagram that could be translated into code, was something I had to practice a lot before ending up with the ERD represented in this document. 
 - Translating the ideas into code was another challenge. My first examples of the initial model for the project was based on a tutorial, which gave me alot of tips on how to structure the application. However I needed to go back to the drawing board as the building of this first project got too convoluted and error prone. I decided to revisit the walkthrough of Code Institutes blog project to be able to start afresh. A also went back to study the Agile methodology again, before starting writing new code.
 - This final version of this project is built using the Django Framework. All models and relations betweeen them as well as dialog with databases are utilizing the powerful features built into the Django framework.  
 - When struturing the views, I was not really sure which page should end up being the landing page. Therefore I changed the original index.html to goal.html. However, this really should be the index.html, as this is the page the user will be taken to after logging in or signing up. 
+- As he project developed into something more solid and I had done a successful deployment of a stable app, I decided to fork the project from the main branch in git. Doing so, I could more safely try new ideas without the risk of breaking the project. When I felt confident enough, I merged the new features with the main branch. 
+- It was right around this time, I couldn't figure out how to successfully wire the goals page together with the task page. After careful consideration, with time being the main culprit, I took the decision not to include the task model in this incarnation of the project. I also totally had to scratch the idea of a calendar from the drawing board. So what was left?
+- After reaching out for help among my fellow students, alumnis and mentors I ended up with this super basic, but still functional application. While it's very obvious that the project would need a great deal of love and care, it's probably a good start of something more useful. 
 
 ### Target audience
 - Anyone who needs a tool to structure and prioritize their goals can make use of this app.
@@ -67,11 +70,21 @@ Because of its wed-based nature, the app is available everywhere where the user 
 - To make use of safe information storage in the Django database, and assure that the content created belongs to the user only.
 
 ## Wireframes
-- [Wireframe]()
+- Before I started writing any actual code, I invested a lot of time planning the project. My first ideas were written down and drawn on paper. Examples of the first wireframes are displayed below.
+- ![Wireframe 1](documentation/wireframe1.jpg)
+- ![Wireframe 2](documentation/wireframe2.jpg)
+- ![Wireframe 3](documentation/wireframe3.jpg)
+- ![Wireframe 4](documentation/wireframe4.jpg)
+- The inspiration were found looking at other peoples projects. My intention was to make something similar but with a personal twist. As the development of the project proceeded, the wireframes also developed into something else. 
 
 ## Flow charts and ERD’s
+- A similar process was used when developing the flowcharts and Entity Relationship Diagrams.
+The first one was very simple and it took alot of practice before I even understood what they were for. 
+- ![Flow Chart idea](documentation/flow1.jpg)
 - ![Flow Chart](documentation/To-do-list.png)
 - ![ERD](documentation/ERD%20my-to-do-list.png)
+- ![First ERD](documentation/erd1.jpg)
+- ![Second ERD](documentation/erd2.jpg)
 ## Kanban board
 ![Kanban](documentation/kanban.png)
 ### EPICS
@@ -115,12 +128,18 @@ Below are all the user stories I created for this project - far from all of them
 - This app makes use of two models, basically; the Goal and the Task. 
 In this version, only the Goal version was made functional because of developing difficulties, leading to time shortage.
 However, the base code for the Task model is written and will be implemented into a future version of the project. 
--[Goal model](documentation/class_goal.png)
--[Task model](documentation/class_task.png)
+- ![Goal model](documentation/class_goal.png)
+- ![Task model](documentation/class_task.png)
 
 ## Design
 - The goals that the user adds into the application, will be displayed in a listview, which is not optimal but works well for this project. 
 ### Colors
+- I tried to use colors that blend well together and don't conflict too much. Both for a better user experience and accessibility. When setting the color scheme, I was aware of the colors in the image on the landing page and chose the colors accordingly.
+- ![Green](documentation/green%20(2).png)
+- This green color has a HEX value of #188123 and was used for the masthead background in the goal area. Both dark and light text is clearly visible on it and the hue has a soothing feel to it. 
+- ![Green2](documentation/green2%20(2).png)
+- This color value is similar to the one above, but has a HEX value of #22a11f and it was used on som lettering on the base.html.
+- ![]
 ### Fonts
 
 ### CRUD Implementation
@@ -198,14 +217,12 @@ It is fully responsive on all devices.
 - Middleware
 - Allauth
 
-### Platforms used
-
 ## Data model
 
 ### Programs Used
 * Gitpod for coding.
 * Lucidchart for making ERD's.
-* 
+* Visual Studio Code for additional coding
 
 ## Agile Methodology
 * Making use of the Agile Methodology for the first time was a steep learning curve for me. However, it proved to be a quite powerful awy of realizing a project. Even though I struggled to put the final project together, it would probably have been even more difficult without proper planning and methodical structuring of the application.  
