@@ -64,7 +64,7 @@ Here it is possible both to edit and delete a goal.
 
 ## Planning and development
 - This was the first project in which I made use of the Agile methodology. A fair amount of time went into planning the project before I could get into building it. 
-I started out with a kanban board - assigned to this repository on Github, to identify the EPIS's and User Stories needed to realize the project in a satisfactory way. Using the backlog in the kanban board, appeared to be a very powerful process to keep track of what I was doing.
+I started out with a kanban board - assigned to this repository on Github, to identify the EPICS's and User Stories needed to realize the project in a satisfactory way. Using the backlog in the kanban board, appeared to be a very powerful process to keep track of what I was doing.
 - Realizing the ideas I had written down and put in ERD's and flowcharts was more challenging than I expected. Actually, just coming up with a comprehensive entity relationship diagram that could be translated into code, was something I had to practice a lot before ending up with the ERD represented in this document. 
 - Translating the ideas into code was another challenge. My first examples of the initial model for the project was based on a tutorial, which gave me alot of tips on how to structure the application. However I needed to go back to the drawing board as the building of this first project got too convoluted and error prone. I decided to revisit the walkthrough of Code Institutes blog project to be able to start afresh. A also went back to study the Agile methodology again, before starting writing new code.
 - This final version of this project is built using the Django Framework. All models and relations betweeen them as well as dialog with databases are utilizing the powerful features built into the Django framework.  
@@ -223,7 +223,7 @@ One undefined variable
 ### Browser testing
 - The app has been tested for its responsiveness on desktop, laptop, tablet and mobile phone.
 It is fully responsive on all devices. 
-- Amiresponsive and Responinator were also useful tools when testing the apps responsiveness.
+- Amiresponsive and Responinator were also useful tools when testing the app's responsiveness.
 
 
 ## Technologies Used
